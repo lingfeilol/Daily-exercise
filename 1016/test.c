@@ -3,7 +3,7 @@
 #include <string.h>
 #include <assert.h>
 
-//求字符串长度 strlen函数的三种实现 求字符串的长度
+//求字符串长度 strlen函数的三种实现 求字符串的长度.
 //第一种：指针从第一个走起，走一步加一
 //
 //int my_strlen(const char* str)//const  不会被修改，不需要对字符串有任何修改操作

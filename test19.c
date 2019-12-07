@@ -1,5 +1,6 @@
 函数指针数组的用途：转移表
 #include <stdio.h>
+//先定义几个函数
 int add(int a, int b)
 {
  return a + b;
@@ -21,7 +22,7 @@ int main()
  int x, y;
  int input = 1;
  int ret = 0;
- int(*p[5])(int x, int y) = { 0, add, sub, mul, div }; //转移表
+ int(*p[5])(int x, int y) = { 0, add, sub, mul, div }; //转移表,函数指针数组，存放函数的地址的数组，通过指针访问来调用函数
  while (input)
  {
  printf( "*************************\n" );
@@ -34,7 +35,7 @@ int main()
  {
  printf( "输入操作数：" );
  scanf( "%d %d", &x, &y);
- ret = (*p[input])(x, y);
+ ret = (*p[input])(x, y);//根据下标来调用某个函数
  }
  else
  printf( "输入有误\n" );
